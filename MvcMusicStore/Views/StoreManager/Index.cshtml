@@ -9,11 +9,12 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-
-<form action="/StoreManager/Search" method="get">
+@using (Html.BeginForm("Search", "StoreManager", FormMethod.Get,new { target = "_blank",@class="editForm" }))
+{
     <input type="text" name="q" value="" />
     <input type="submit" name="sub" value="Search!" />
-</form>
+}
+
 <table class="table">
     <tr>
         <th>
