@@ -3,26 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MvcMusicStore.Models;
 
 namespace MvcMusicStore.Controllers
 {
     public class StoreController : Controller
     {
         // GET: Store
-        public string Index()
+        public ActionResult Index()
         {
-            return "Hello from Store.index()";
+            var ablums = GetAblum();
+            return View(ablums);
         }
 
-        public string  Browser(string genre)
+        [Authorize]
+        public ActionResult Buy(int id)
         {
-            string message = HttpUtility.HtmlEncode("Store.Browser,genre="+genre);
-            return message;
+            var ablums = GetAblum().Single(a => a.AblumId == id);
+            return View(ablums);
         }
 
-        public string Detail(int id) {
-            string message = HttpUtility.HtmlEncode("Store.Browser,id="+id);
-            return message;
+        private static List<Models.Ablum> GetAblum() {
+            var ablums = new List<Ablum>()
+            {
+                new Ablum(){ AblumId=2,Price=100m,Title="The fall of math" },
+                new Ablum(){ AblumId=3,Price=111m,Title="The blue notebooks"},
+                new Ablum(){ AblumId=4,Price=99.9m,Title="Lose in Translation"},
+                new Ablum(){ AblumId=5,Price=10.44m,Title="Permutation"}
+            };
+            return ablums;
         }
+
+        
     }
 }

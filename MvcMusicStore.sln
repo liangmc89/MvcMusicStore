@@ -7,6 +7,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcMusicStore", "MvcMusicSt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcMusicStore.tests", "MvcMusicStore.tests\MvcMusicStore.tests.csproj", "{A47CC4D2-9E87-4DA5-B2D1-330C9C791F63}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sourceCode", "sourceCode", "{B7D704DC-4BC5-41D2-B60D-F49939346E52}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\download\ch08\MvcMusicStore.C08.ActionLink.zip = ..\..\download\ch08\MvcMusicStore.C08.ActionLink.zip
+		..\..\download\ch08\MvcMusicStore.C08.AjaxForm.rar = ..\..\download\ch08\MvcMusicStore.C08.AjaxForm.rar
+		..\..\download\ch08\MvcMusicStore.C08.Autocomplete.zip = ..\..\download\ch08\MvcMusicStore.C08.Autocomplete.zip
+		..\..\download\ch08\MvcMusicStore.C08.CustomClientValidation.zip = ..\..\download\ch08\MvcMusicStore.C08.CustomClientValidation.zip
+		..\..\download\ch08\MvcMusicStore.C08.jQuery.zip = ..\..\download\ch08\MvcMusicStore.C08.jQuery.zip
+		..\..\download\ch08\MvcMusicStore.C08.Templates.zip = ..\..\download\ch08\MvcMusicStore.C08.Templates.zip
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
